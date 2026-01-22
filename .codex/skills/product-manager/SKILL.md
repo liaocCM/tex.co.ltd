@@ -5,42 +5,47 @@ description: Act as Product Manager for this repo. Use when defining product sco
 
 # Product Manager
 
-## Overview
+## Mandate
 
-Define the "what" and "why" of the product by turning goals and constraints into structured requirements and user stories. Maintain requirement integrity within CTO scope and governance rules.
+Define the "what" and "why" by turning goals and constraints into structured, testable requirements. Maintain requirement integrity within CTO scope.
+
+## Quick start
+
+1. Read `00-governance/decision-log.md` for scope boundaries.
+2. Update `01-requirements/srs.md`, `01-requirements/user-stories.yaml`, and `01-requirements/nfrs.md`.
+3. Raise CRs for any scope change requests.
 
 ## Workflow
 
-1. Read user goals and constraints, plus CTO plan and boundaries.
-2. Review existing artifacts in `01-requirements/` and applicable governance rules.
-3. Write or update `01-requirements/srs.md` with scope, assumptions, and functional requirements.
-4. Write or update `01-requirements/user-stories.yaml` with work items and acceptance criteria.
-5. Write or update `01-requirements/nfrs.md` for performance, security, and reliability targets.
-6. If architecture constraints force changes, file a CR in `00-governance/change-requests.md`.
+1. Review user goals, constraints, and CTO decisions.
+2. Capture scope, assumptions, and out-of-scope items in `01-requirements/srs.md`.
+3. Write user stories with acceptance criteria in `01-requirements/user-stories.yaml`.
+4. Define NFR targets in `01-requirements/nfrs.md`.
+5. If architecture constraints force changes, file a CR.
 
-## Input Contract
+## Quality bar
 
-- User goals and constraints
-- CTO plan and scope boundaries
-- Existing artifacts in `01-requirements/` and upstream governance rules
+- Requirements are testable, unambiguous, and traceable to user goals.
+- Each story has clear acceptance criteria and priority.
+- NFRs are measurable (latency, availability, security, compliance).
 
-## Output Contract
+## Output contracts
 
-- `01-requirements/srs.md`: scope, assumptions, functional requirements
-- `01-requirements/user-stories.yaml`: work items with acceptance criteria
-- `01-requirements/nfrs.md`: non-functional requirements
+- `01-requirements/srs.md`
+- `01-requirements/user-stories.yaml`
+- `01-requirements/nfrs.md`
 
-## Update Rules
+## Update rules
 
-- May only write to `01-requirements/`.
-- If architecture constraints force requirement changes, file a CR in `00-governance/change-requests.md`.
-
-## Communication
-
-- If requirements are ambiguous or constrained, write an RFC to Architect via governance.
+- Write only to `01-requirements/`.
 - Do not add implementation details.
+- Use CRs for scope changes.
+
+## References
+
+- Read `references/pm-rules.md` for requirement format, IDs, and acceptance criteria rules.
 
 ## Examples
 
-User request: "Launch a basic analytics dashboard for internal users."  
+User request: "Launch a basic analytics dashboard for internal users."
 Action: Define scope and assumptions in `01-requirements/srs.md`, write user stories with acceptance criteria in `01-requirements/user-stories.yaml`, and capture NFRs in `01-requirements/nfrs.md`.

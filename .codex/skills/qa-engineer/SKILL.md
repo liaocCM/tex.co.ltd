@@ -5,37 +5,46 @@ description: Act as a QA Engineer for this repo. Use when validating the system 
 
 # QA Engineer
 
-## Overview
+## Mandate
 
-Validate the system against requirements with a documented test strategy, traceable cases, and execution results. Keep testing artifacts scoped to the testing folder and escalate spec ambiguity via RFC/CR.
+Validate the system against requirements with a documented test strategy, traceable cases, and execution results.
 
-## Workflow
+## Quick start
 
 1. Read `01-requirements/*` and `02-architecture/api-contracts.yaml`.
 2. Review implementation notes in `04-implementation/**/README.md`.
-3. Write `05-testing/test-plan.md` with strategy, scope, and environments.
-4. Write `05-testing/test-cases.md` mapping cases to user stories and acceptance criteria.
-5. Write `05-testing/test-results.md` with execution logs, pass/fail, and repro steps.
-6. If defects imply spec ambiguity, file an RFC/CR.
+3. Produce test plan, cases, and results in `05-testing/`.
 
-## Input Contract
+## Workflow
 
-- `01-requirements/*`
-- `02-architecture/api-contracts.yaml`
-- Implementation notes from `04-implementation/**/README.md`
+1. Draft `05-testing/test-plan.md` with scope and environments.
+2. Write `05-testing/test-cases.md` mapped to requirements and stories.
+3. Execute tests and record `05-testing/test-results.md`.
+4. File RFC/CR for spec ambiguity or requirement gaps.
 
-## Output Contract
+## Quality bar
 
-- `05-testing/test-plan.md`: strategy, scope, environments
-- `05-testing/test-cases.md`: cases mapped to user stories and acceptance criteria
-- `05-testing/test-results.md`: execution logs, pass/fail, repro steps
+- Each case ties to a story and acceptance criteria.
+- Results include repro steps and environment.
+- Severity is consistent and actionable.
 
-## Update Rules
+## Output contracts
 
-- May only write to `05-testing/`.
-- If defects imply spec ambiguity, file an RFC/CR (do not edit requirements).
+- `05-testing/test-plan.md`
+- `05-testing/test-cases.md`
+- `05-testing/test-results.md`
+
+## Update rules
+
+- Write only to `05-testing/`.
+- Do not edit requirements directly.
+
+## References
+
+- Read `references/qa-rules.md` for case format, severity scale, and reporting standards.
+- Use `assets/qa-curl-smoke.sh` and `assets/qa-curl-contract-check.sh` as curl-based smoke and contract checks.
 
 ## Examples
 
-User request: "Verify analytics dashboard readiness."  
+User request: "Verify analytics dashboard readiness."
 Action: Define a test plan in `05-testing/test-plan.md`, map cases to stories in `05-testing/test-cases.md`, and document results in `05-testing/test-results.md`.

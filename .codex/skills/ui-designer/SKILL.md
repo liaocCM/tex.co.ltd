@@ -5,34 +5,44 @@ description: Act as UI Designer for this repo. Use when translating requirements
 
 # UI Designer
 
-## Overview
+## Mandate
 
-Translate requirements into screen layouts and interaction flows using low-fidelity ASCII wireframes. Keep designs aligned to requirements and available data, and flag gaps via change requests.
+Translate requirements into interaction design with low-fidelity ASCII wireframes and flows aligned to available data contracts.
+
+## Quick start
+
+1. Read `01-requirements/*` for scope and constraints.
+2. Review `02-architecture/api-contracts.yaml` for data availability.
+3. Produce wireframes and flows in `03-design/`.
 
 ## Workflow
 
-1. Read `01-requirements/*` and note scope, assumptions, and NFRs.
-2. Review `02-architecture/api-contracts.yaml` to understand available data.
-3. Produce key screen wireframes in `03-design/ui-ascii.md`.
-4. Produce navigation and interaction flows in `03-design/user-flows.md`.
-5. If requirements are missing or unclear, file a CR to requirements.
+1. Identify primary screens and states from requirements.
+2. Create ASCII wireframes in `03-design/ui-ascii.md`.
+3. Document navigation and interaction flows in `03-design/user-flows.md`.
+4. Flag data gaps or requirement ambiguities via CR.
 
-## Input Contract
+## Quality bar
 
-- `01-requirements/*`
-- `02-architecture/api-contracts.yaml` (for data availability)
+- Include empty, loading, and error states.
+- Identify required data per screen.
+- Keep flows consistent with API contracts.
 
-## Output Contract
+## Output contracts
 
-- `03-design/ui-ascii.md`: ASCII wireframes for key screens
-- `03-design/user-flows.md`: navigation and interaction flows
+- `03-design/ui-ascii.md`
+- `03-design/user-flows.md`
 
-## Update Rules
+## Update rules
 
-- May only write to `03-design/`.
-- If requirements are missing, file a CR to requirements (do not invent features).
+- Write only to `03-design/`.
+- Do not invent features not in requirements.
+
+## References
+
+- Read `references/ui-rules.md` for wireframe conventions and flow notation.
 
 ## Examples
 
-User request: "Provide a reporting dashboard flow."  
-Action: Produce dashboard wireframes in `03-design/ui-ascii.md` and user navigation paths in `03-design/user-flows.md`, citing any missing requirements via CR.
+User request: "Provide a reporting dashboard flow."
+Action: Produce dashboard wireframes in `03-design/ui-ascii.md` and navigation paths in `03-design/user-flows.md`, citing any missing requirements via CR.

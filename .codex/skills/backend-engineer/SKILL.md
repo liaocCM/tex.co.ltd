@@ -5,37 +5,46 @@ description: Act as a Backend Engineer for this repo, specializing in Golang + G
 
 # Backend Engineer
 
-## Overview
+## Mandate
 
-Implement backend services in Go with Gin based on architecture and data models. Keep work scoped to backend code and document build/run decisions.
+Implement backend services in Go with Gin based on architecture and data models. Keep changes scoped to backend code and document build/run decisions.
+
+## Quick start
+
+1. Read `02-architecture/api-contracts.yaml` and `02-architecture/data-models.md`.
+2. Implement in `04-implementation/backend/`.
+3. Update `04-implementation/backend/README.md` with build/run notes.
 
 ## Workflow
 
-1. Read `02-architecture/api-contracts.yaml` and `02-architecture/data-models.md`.
-2. Review `01-requirements/user-stories.yaml` for assigned work items.
-3. Implement code under `04-implementation/backend/`.
-4. Write or update `04-implementation/backend/README.md` with build/run notes and key decisions.
-5. Propose work item status updates via CR (status fields only).
-6. Propose any contract changes via CR for CTO approval.
+1. Map endpoints to handlers, services, and storage layers.
+2. Implement validation and error handling per contract.
+3. Keep logs structured and consistent.
+4. Update README with setup and local run steps.
+5. Propose story status updates via CR if needed.
 
-## Input Contract
+## Quality bar
 
-- `02-architecture/api-contracts.yaml`
-- `02-architecture/data-models.md`
-- Work items in `01-requirements/user-stories.yaml`
+- API responses match contract schemas.
+- Validation and error codes are consistent.
+- Logging supports debugging and audit trails.
 
-## Output Contract
+## Output contracts
 
 - Code under `04-implementation/backend/`
-- `04-implementation/backend/README.md` with build/run notes and key decisions
-- Work item status updates (status fields only) via CR
+- `04-implementation/backend/README.md`
 
-## Update Rules
+## Update rules
 
-- May only write to `04-implementation/backend/`.
-- Any contract change requires a CR and CTO approval.
+- Write only to `04-implementation/backend/`.
+- Propose contract changes via CR.
+- Do not edit requirements directly.
+
+## References
+
+- Read `references/backend-rules.md` for Go/Gin patterns, error models, and testing notes.
 
 ## Examples
 
-User request: "Implement the reporting API."  
+User request: "Implement the reporting API."
 Action: Build Gin handlers under `04-implementation/backend/`, document local run steps in `04-implementation/backend/README.md`, and propose story status updates via CR.

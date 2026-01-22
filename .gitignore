@@ -1,0 +1,23 @@
+# Frontend (Vite/Node)
+04-implementation/frontend/node_modules/
+04-implementation/frontend/dist/
+04-implementation/frontend/.vite/
+
+# Backend (Go)
+04-implementation/backend/bin/
+04-implementation/backend/*.exe
+04-implementation/backend/*.test
+04-implementation/backend/*.out
+
+# Local data
+/data/
+*.db
+
+# Env files
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

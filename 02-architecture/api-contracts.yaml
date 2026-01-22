@@ -1,0 +1,95 @@
+version: 1
+base_url: http://localhost:8080/api
+content_type: application/json
+endpoints:
+  - method: GET
+    path: /health
+    description: Health check
+    responses:
+      200:
+        body:
+          status: ok
+  - method: GET
+    path: /todos
+    description: List TODOs
+    query:
+      status:
+        type: string
+        enum: [all, active, completed]
+        default: all
+    responses:
+      200:
+        body:
+          todos:
+            - id: 1
+              title: "Buy milk"
+              notes: "2%"
+              completed: false
+              created_at: "2025-01-01T12:00:00Z"
+              updated_at: "2025-01-01T12:00:00Z"
+  - method: POST
+    path: /todos
+    description: Create TODO
+    request:
+      body:
+        title: "string"
+        notes: "string (optional)"
+    responses:
+      201:
+        body:
+          id: 1
+          title: "Buy milk"
+          notes: "2%"
+          completed: false
+          created_at: "2025-01-01T12:00:00Z"
+          updated_at: "2025-01-01T12:00:00Z"
+  - method: GET
+    path: /todos/{id}
+    description: Get TODO by id
+    responses:
+      200:
+        body:
+          id: 1
+          title: "Buy milk"
+          notes: "2%"
+          completed: false
+          created_at: "2025-01-01T12:00:00Z"
+          updated_at: "2025-01-01T12:00:00Z"
+      404:
+        body:
+          error: "not found"
+  - method: PUT
+    path: /todos/{id}
+    description: Update TODO
+    request:
+      body:
+        title: "string"
+        notes: "string (optional)"
+        completed: false
+    responses:
+      200:
+        body:
+          id: 1
+          title: "Buy milk"
+          notes: "2%"
+          completed: false
+          created_at: "2025-01-01T12:00:00Z"
+          updated_at: "2025-01-01T12:00:00Z"
+      404:
+        body:
+          error: "not found"
+  - method: DELETE
+    path: /todos/{id}
+    description: Delete TODO
+    responses:
+      204: {}
+      404:
+        body:
+          error: "not found"
+errors:
+  400:
+    body:
+      error: "bad request"
+  500:
+    body:
+      error: "internal error"

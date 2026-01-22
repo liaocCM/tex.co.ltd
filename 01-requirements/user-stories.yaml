@@ -1,0 +1,52 @@
+release: todo-mvp
+stories:
+  - id: US-001
+    title: Create a TODO item
+    owner: product-manager
+    status: planned
+    acceptance_criteria:
+      - User can add a TODO with title and optional notes.
+      - Newly created TODO appears in the list immediately.
+  - id: US-002
+    title: View TODO list
+    owner: product-manager
+    status: planned
+    acceptance_criteria:
+      - User can view all TODOs in a list.
+      - List shows completion state and last updated time.
+  - id: US-003
+    title: Update a TODO item
+    owner: product-manager
+    status: planned
+    acceptance_criteria:
+      - User can edit title and notes.
+      - Changes persist after refresh.
+  - id: US-004
+    title: Complete or reopen a TODO item
+    owner: product-manager
+    status: planned
+    acceptance_criteria:
+      - User can toggle completion state.
+      - Completed items are visually distinct.
+  - id: US-005
+    title: Delete a TODO item
+    owner: product-manager
+    status: planned
+    acceptance_criteria:
+      - User can delete a TODO item.
+      - Deleted items do not appear in the list after refresh.
+  - id: US-006
+    title: Filter TODO list by status
+    owner: product-manager
+    status: planned
+    acceptance_criteria:
+      - User can filter by all/active/completed.
+      - Filter state persists while navigating the app.
+  - id: BUG-001
+    title: Backend starts without manual DB directory setup
+    owner: backend-engineer
+    status: planned
+    acceptance_criteria:
+      - Backend creates the SQLite directory if missing.
+      - Startup succeeds with default settings on a clean repo.
+      - README documents any required environment overrides.

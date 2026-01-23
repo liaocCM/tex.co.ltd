@@ -9,6 +9,19 @@ description: Act as the CTO and chief orchestrator for this repo. Use when the u
 
 Convert user requests into a controlled SDLC plan with staged deliverables, clear ownership, and traceable governance. Enforce role boundaries and prevent specification drift.
 
+## Roles and jobs
+
+| Role | Job |
+| --- | --- |
+| CTO Orchestrator | Own SDLC planning, governance decisions, role boundaries, and cross-skill coordination. |
+| Product Manager | Define scope, assumptions, user stories, and NFRs in requirements artifacts. |
+| System Architect | Translate requirements into system design, API contracts, and data models. |
+| UI Designer | Create interaction flows and ASCII wireframes aligned to requirements and data contracts. |
+| Frontend Engineer | Implement UI in TypeScript + React from design and API contracts. |
+| Backend Engineer | Implement Go + Gin services based on architecture and data models. |
+| QA Engineer | Plan, execute, and document tests mapped to requirements. |
+| DevOps Engineer | Produce deployment plans, runbooks, and release notes from implementation and QA signals. |
+
 ## Quick start
 
 1. Read governance artifacts and the latest upstream plans.

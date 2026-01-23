@@ -16,11 +16,29 @@ type UpdateTodo = {
 };
 
 const baseUrl = "/api";
+const uidStorageKey = "todo_uid";
+
+function getUid(): string {
+  if (typeof window === "undefined") {
+    return "server";
+  }
+  const existing = window.localStorage.getItem(uidStorageKey);
+  if (existing && existing.trim()) {
+    return existing;
+  }
+  const newUid =
+    typeof window.crypto?.randomUUID === "function"
+      ? window.crypto.randomUUID()
+      : `uid-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  window.localStorage.setItem(uidStorageKey, newUid);
+  return newUid;
+}
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const response = await fetch(`${baseUrl}${path}`, {
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      "X-User-Uid": getUid()
     },
     ...options
   });

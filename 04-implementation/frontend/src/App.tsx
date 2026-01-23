@@ -165,6 +165,7 @@ export default function App() {
             <textarea
               id="todo-notes"
               placeholder="Add optional detail"
+              rows={2}
               value={form.notes}
               onChange={(event) => setForm({ ...form, notes: event.target.value })}
             />

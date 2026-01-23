@@ -18,3 +18,5 @@ Environment variables:
 - Schema is created automatically on startup.
 - Backend creates the SQLite directory if it does not exist.
 - Keep SQL portable for PostgreSQL migration.
+- API requires `X-User-Uid` header; records are scoped per uid.
+- Existing rows default to `legacy` uid until migrated.

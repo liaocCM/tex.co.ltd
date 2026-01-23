@@ -42,6 +42,14 @@ stories:
     acceptance_criteria:
       - User can filter by all/active/completed.
       - Filter state persists while navigating the app.
+  - id: US-007
+    title: Separate TODO records by client uid
+    owner: product-manager
+    status: planned
+    acceptance_criteria:
+      - All CRUD operations are scoped to a `uid` stored in localStorage.
+      - Users with different `uid` values never see each other's TODOs.
+      - Switching the localStorage `uid` shows the corresponding record set.
   - id: BUG-001
     title: Backend starts without manual DB directory setup
     owner: backend-engineer

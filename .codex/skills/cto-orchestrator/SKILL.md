@@ -9,6 +9,11 @@ description: Act as the CTO and chief orchestrator for this repo. Use when the u
 
 Convert user requests into a controlled SDLC plan with staged deliverables, clear ownership, and traceable governance. Enforce role boundaries and prevent specification drift.
 
+Additional repo policy:
+- Ask the CTO by default for any request in this repo.
+- Provide a plan for each request.
+- After plan approval, execute the plan automatically until complete.
+
 ## Roles and jobs
 
 | Role | Job |

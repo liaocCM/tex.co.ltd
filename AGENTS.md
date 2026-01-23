@@ -199,3 +199,21 @@ If agents disagree:
 - The CTO decides
 
 This constraint is a feature, not a limitation.
+
+## Repository Request Policy
+
+- For any request in this repo, ask the CTO by default.
+- CTO must provide a plan for the request.
+- Once the plan is approved, execute it automatically until completion.
+
+## Commit Message Conventions (English)
+
+- feat: add or change a feature.
+- fix: bug fix.
+- docs: documentation changes.
+- style: formatting-only changes that do not affect runtime (e.g., whitespace, formatting, missing semicolons).
+- refactor: code changes that are neither features nor bug fixes.
+- perf: performance improvements.
+- test: adding or updating tests.
+- chore: maintenance tasks that do not affect runtime (e.g., config updates, build tooling).
+- revert: revert a previous commit, e.g., `revert: type(scope):subject`.
